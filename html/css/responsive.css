@@ -1,0 +1,211 @@
+/* Charitify Theme Responsive Design */
+
+@media (max-width: 1024px) {
+    .events-item {
+        padding-left: 0;
+    }
+    .events-item .event-thumb {
+        width: 100%;
+        height: auto;
+        position: inherit;
+    }
+    .list-items .blog-post .blog-content{
+        padding: 0;
+    }
+    .single-post h2{
+        font-size: 20px;
+    }
+    .comments-list .comment-box{
+        width: 620px;
+    }
+    .reply-list .comment-box{
+        width: 540px;
+    }
+}
+
+/* ---- Start of max-width 992px CSS ---- */
+@media (max-width: 992px) {
+    .sm-padding{
+        padding: 15px;
+    }
+    .m-pd-top-none{ padding-top: 0; }
+    .hero-section{ height: 400px; }
+    h1{ font-size: 36px; }
+    .about-section{ padding-top: 0; }
+    .clients-thumb .ct-thumb.thumb-4{ left: 200px; }
+    #mainmenu li a{
+        font-size: 12px;
+    }
+    .blog-content p{
+        font-size: 12px;
+    }
+    .blog-items{
+        padding: 0 10px;
+    }
+    .list-items .blog-post .col-md-6:first-child{
+        padding-left: 15px;
+    }
+    .bottom-header .default-btn{
+        display: none;
+    }
+    #mainmenu li{
+        padding-left: 15px;
+    }
+    .blog-items.single-post{ border: none; padding: 0; }
+    .sidebar-wrap{ padding: 0; }
+    .blog-post .blog-content a{
+        font-size: 15px;
+    }
+    .widget-section{
+        padding-bottom: 60px;
+    }
+}
+/* ---- End of max-width 992px CSS ---- */
+
+
+/* ---- Start of min-width 480px and max-width 768px CSS ---- */
+@media all and (min-width: 480px) and (max-width: 768px) {
+	
+}
+/* ---- End of min-width 480px and max-width 768px CSS ---- */
+
+
+/* ---- Start of max-width 767px CSS ---- */
+@media all and (max-width: 767px) {
+    body, p{
+        font-size: 12px;
+        line-height: 22px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    h3{
+        font-size: 16px;
+    }
+    p br{
+        display: none;
+    }
+    .padding{
+        padding: 60px 0;
+    }
+    .m-pd-top-none{ padding-top: 0; }
+    .xs-padding{
+    	padding: 15px;
+    }
+    .site-branding{ padding: 15px 0; }
+    .js #mainmenu {
+        display:none;
+    }
+    .js .slicknav_menu {
+        display:block;
+    }
+    .cd-pricing-list > li {
+        width: 50%;
+        float: left;
+    }
+    .cd-pricing-list { margin: 0 -10px; }
+    .pager-header{
+        min-height: 220px;
+    }
+    .breadcrumb {
+        right: auto;
+        top: auto;
+        bottom: -50px;
+        left: -15px;
+        margin: 0;
+    }
+    .list-items .blog-post img{
+        margin-bottom: 10px;
+    }
+    .colum-row .col-sm-6:first-child{
+        margin-bottom: 15px;
+    }
+    .contact-info ul li{
+        font-size: 10px;
+    }
+    .single-post h2{
+        font-size: 16px;
+    }
+    .share-icon li{
+        margin-bottom: 10px;
+    }
+    .footer-section .footer-social,
+    .footer-section{
+        text-align: center;
+    }
+    .footer-social li a{ margin: 0 10px; }
+    .hero-section{
+        height: 310px;
+    }
+    .hero-content h1{
+        font-size: 30px;
+    }
+    .site-branding img{
+        padding: 5px 0;
+    }
+    .gallery-filter li{
+        padding: 5px 10px;
+        margin-right: 0;
+        font-size: 10px;
+    }
+    .comments-list .comment-box{ width: 78%; }
+    .reply-list{
+        padding-left: 10px;
+    }
+    .comments-list .comment-box:before,
+    .comments-list .comment-box:after,
+    .comments-list:before{
+        display: none;
+    }
+    #scroll-to-top {
+        width: 35px;
+        height: 35px;
+        font-size: 10px;
+        line-height: 35px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+/* ---- End of max-width 767px CSS ---- */
+
+
+/* ---- Start of max-width 576px CSS ---- */
+@media all and (max-width: 576px) {
+    .coment-form .form-group .col-sm-4{
+        margin-bottom: 15px;
+        margin-top: auto;
+    }
+    .comment-form .form-group .col-sm-4:nth-child(1),
+    .comment-form .form-group .col-sm-4:nth-child(2){
+        margin-bottom: 15px;
+    }
+    .top-content-wrap ul li{
+        margin-right: 18px;
+    }
+    .cd-pricing-list > li {
+        width: 100%;
+        float: none;
+    }
+    .cd-pricing-list,
+    .cd-pricing-wrapper{ margin: 0; }
+
+}
+/* ---- End of max-width 576px CSS ---- */
+
+
+/* ---- Start of max-width 420px CSS ---- */
+@media all and (max-width: 420px) {
+    
+}
+/* ---- End of max-width 420px CSS ---- */
+
+
+/* ---- Start of max-width 380px CSS ---- */
+@media all and (max-width: 380px) {
+	
+}
+/* ---- End of max-width 380px CSS ---- */

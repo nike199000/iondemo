@@ -1,0 +1,73 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title >REGISTER</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list no-line>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Username" name="fullname" #username></ion-input>
+    </ion-item>
+  
+      <ion-item>
+      <ion-input type="email" placeholder="Email" name="email" #email></ion-input>
+    </ion-item>
+  
+      <ion-item>
+      <ion-input type="number" placeholder="Mobile Number(92xxxxxxxxx)"  name="mobile" #mobile></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="password" placeholder="Password" name="password" #password></ion-input>
+    </ion-item>
+
+<ion-item>
+    <ion-input type="text" placeholder="CNIC Number" name="cnic" #cnic [brmasker]="{mask:'00000-0000000-0', len:15, type:'num'}"></ion-input>
+</ion-item>
+
+
+<ion-item>
+    <ion-input type="text" placeholder="Card Number" name="cardnumber" #cardnumber [brmasker]="{mask:'0000-0000-0000-0000', len:19, type:'num'}"></ion-input>
+</ion-item>
+
+
+  </ion-list>
+
+    <div padding *ngIf="lo1">
+  <button ion-button  round outline block (click)="verify2(cardnumber)">Enter</button>
+  </div>
+ 
+
+    <div padding *ngIf="lo">
+  <button ion-button  round outline block (click)="verify(mobile, email, cardnumber)">Send Pin</button>
+  </div>
+ 
+
+    <ion-item *ngIf="smspin1">
+      <ion-input type="text" placeholder="Enter SMS Pin" [(ngModel)]="smspin"></ion-input>
+    </ion-item>
+  
+
+  
+  <div padding *ngIf="register">
+  <button ion-button  round outline block (click)="Register(smspin, emailpin)">Register</button>
+  </div>
+  
+  </ion-content>
+
+
+<ion-footer >
+<div style="text-align: center; background-color: #0073b7; height: 20px; color: white">IGI General Insurance Limited.
+</div>
+</ion-footer>

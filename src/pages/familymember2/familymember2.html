@@ -1,0 +1,40 @@
+<!--
+  Generated template for the FamilymemberPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Members</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-list *ngFor="let member of members">
+
+		<ion-item>
+			<div>
+				<div class="name">{{member.name}}</div>
+			</div>
+
+			   <div class="block_container">
+    <div class="bloc1">Relationship:</div>
+    <div class="bloc2">{{member.relationship}}</div>
+  </div>
+
+			   <div class="block_container">
+    <div class="bloc1">Gender:</div>
+    <div class="bloc2">{{member.gender}}</div>
+  </div>
+
+  			   <div class="block_container">
+    <div class="bloc1">Age:</div>
+    <div class="bloc2">{{member.age}}</div>
+  </div>
+</ion-item>
+</ion-list>
+
+
+</ion-content>

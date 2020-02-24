@@ -1,0 +1,157 @@
+<!--
+  Generated template for the BenefitPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>POLICY DETAILS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-segment  [(ngModel)]="galleryType"  color="primary">
+
+    <ion-segment-button value="ipd">
+      IPD Details
+    </ion-segment-button>
+
+        <ion-segment-button value="maternity">
+      Maternity
+    </ion-segment-button>  
+
+
+    <ion-segment-button value="opd">
+      OPD Details
+    </ion-segment-button >
+    
+
+ 
+  </ion-segment>
+
+
+<div  [ngSwitch]="galleryType">
+
+<div class="card" *ngSwitchCase="'opd'">
+  <div *ngFor="let g of userData">
+  	
+  	<br>
+  	<h4>Entitlement:</h4>
+  	<p>You and your family is entitled to an annual OPD expenses of RS. {{g.opd_total_value}}</p>
+
+  </div>
+
+
+
+</div>
+
+<div class="card" *ngSwitchCase="'ipd'">
+  <div *ngFor="let g of userData">
+  	
+  	<br>
+  	<h4>Entitlement:</h4>
+  	<p>You and your family is entitled to an annual IPD expenses of RS. {{g.ipd_total_value}}</p>
+
+  </div>
+
+  
+
+</div>
+
+<div class="card" *ngSwitchCase="'maternity'">
+  <div *ngFor="let g of userData">
+  	
+  	<br>
+  	<h4>Entitlement:</h4>
+   <p>You and your family is entitled to an annual maternity expenses (Normal) of RS. {{g.maternity_total_value}}</p>
+     <br>
+   <p>You and your family is entitled to an annual maternity expenses  of RS. {{g.maternity_complicated_total_value}}</p>
+    
+
+  </div>
+
+  
+
+</div>
+
+
+
+
+</div>
+
+<!-- <div class="block_container1"><div class="bloc1">Scope: </div><div *ngIf="wording" class="bloc2"> {{wording | slice:20:40}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Pre-Authorization:</div><div *ngIf="wording" class="bloc2">{{wording | slice:73:105}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Territorial Coverage:</div><div *ngIf="wording" class="bloc2">{{wording | slice:141:174}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Health Card:</div><div *ngIf="wording" class="bloc2">{{wording | slice:201:220}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Hospital Network:</div><div *ngIf="wording" class="bloc2">{{wording | slice:252:278}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Emergency Hotline No:</div><div *ngIf="wording" class="bloc2">{{wording | slice:316:331}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Pre-Hospitalization:</div><div *ngIf="wording" class="bloc2">{{wording | slice:366:453}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Post-Hospitalization:</div><div *ngIf="wording" class="bloc2">{{wording | slice:489:537}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Pre/Post Natal Expenses:</div><div *ngIf="wording" class="bloc2">{{wording | slice:626:661}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Circumcision Benefit:</div><div *ngIf="wording" class="bloc2">{{wording | slice:697:732}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Vaccinations</div><div *ngIf="wording" class="bloc2">{{wording | slice:760:786}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Daycare Procedure:</div><div *ngIf="wording" class="bloc2">{{wording | slice:820:830}}</div></div>
+
+<div class="block_container1"><div class="bloc1">ICU Confinement:</div><div *ngIf="wording" class="bloc2">{{wording | slice:861:870}}</div></div>
+
+
+<div class="block_container1"><div class="bloc1">Newly Born Babies:</div><div *ngIf="wording" class="bloc2">{{wording | slice:904:923}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Specialized Investigations:</div><div *ngIf="wording" class="bloc2">{{wording | slice:965:1002}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Dental Treatment:</div><div *ngIf="wording" class="bloc2">{{wording | slice:1034:1081}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Local Ambulance:</div><div *ngIf="wording" class="bloc2">{{wording | slice:1112:1136}}</div></div>
+
+
+<div class="block_container1"><div class="bloc1">Hepatits Treatment:</div><div *ngIf="wording" class="bloc2">{{wording | slice:1170:1177}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Congenital Conditions:</div><div *ngIf="wording" class="bloc2">{{wording | slice:1214:1221}}</div></div>
+
+<div class="block_container1"><div *ngIf="wording" class="bloc2">{{wording | slice:1236:1301}}</div></div>
+<div class="block_container1"><div *ngIf="wording" class="bloc2">{{wording | slice:1306:1370}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Cataract Surgery:</div><div *ngIf="wording" class="bloc2">{{wording | slice:1393:1434}}</div></div>
+<div class="block_container1"><div class="bloc1">Claim Processing Tat:</div><div *ngIf="wording" class="bloc2">{{wording | slice:1476:1541}}</div></div>
+<div class="block_container1"><div class="bloc1">Maximum Age Limit For Inpatient Medical Cover:</div><div *ngIf="wording" class="bloc2">{{wording | slice:1612:1646}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Payment Mode:</div><div *ngIf="wording" class="bloc2">{{wording | slice:1669:1684}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Pre Existing Conditions:</div><div *ngIf="wording" class="bloc2">{{wording | slice:1718:1725}}</div></div>
+
+<div class="block_container1"><div class="bloc1">Health Declaration:</div><div *ngIf="wording" class="bloc2">{{wording | slice:1775:1781}}</div></div>
+
+ -->
+<br>
+<!-- <div *ngIf="wording">
+ <ion-list *ngFor="let policy of displayData" class="block_container1"><div class="bloc1">{{policy.name}} :</div><div class="bloc2">&nbsp;{{policy.value}}</div></ion-list>
+</div> -->
+
+
+<div *ngIf="displayData && displayData.length > 0">
+ <ion-list *ngFor="let policy of displayData" class="block_container1"><div class="bloc1">{{policy.name}} :</div><div class="bloc2">&nbsp;{{policy.value}}</div></ion-list></div>
+<div *ngIf="!displayData || displayData.length === 0">No Data available</div>
+
+
+
+
+
+
+
+
+
+</ion-content>
+

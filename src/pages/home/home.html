@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title >
+     LOGIN
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div style="text-align: center; margin-top:20px;">
+    <img src="assets/imgs/ll.png" style="height: 170px; ">
+
+  </div>
+  <br>
+  <ion-list >
+
+    <ion-item>
+<!--   <ion-icon item-left name="ios-at-outline" color="primary"></ion-icon>
+ -->  <ion-input type="text" placeholder="Username" name="username" #username></ion-input>
+</ion-item>
+
+    <ion-item>
+<!--   <ion-icon item-left name="ios-key-outline" color="primary"></ion-icon>
+ -->    <ion-input type="password" placeholder="Password" name="password" #password></ion-input>
+</ion-item>
+
+
+
+
+<br>
+    <div style="text-align: center"><button ion-button round block outline  (click)="signIn()">Sign In</button></div>
+
+<br>
+    <div style="text-align: center;">Don't have an Account? <font (click)="signUp()" style="color: #0073b7; font-weight: 500">Signup</font> </div>
+
+
+    <!-- <button ion-button round outline block (click)="signUp()">Register</button> -->
+  
+  </ion-list>
+</ion-content>
+
+<ion-footer >
+<div style="text-align: center; background-color: #0073b7; height: 20px; color: white">IGI General Insurance Limited.
+</div>
+</ion-footer>

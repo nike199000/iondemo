@@ -1,0 +1,98 @@
+<!--
+  Generated template for the StatusdetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>CLAIM DETAILS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<br><br>
+	<h4><span>Personal Details</span></h4>
+
+
+<div *ngIf="x">
+	 <div class="block_container">
+      <div class="bloc1">Employee name: </div>
+      <div class="bloc2" >{{x.member_name}}</div>
+    </div>
+
+	 <div class="block_container">
+      <div class="bloc1">Policy number: </div>
+      <div class="bloc2">{{x.policy_id}}</div>
+    </div>
+
+	 <div class="block_container">
+      <div class="bloc1">Claim for: </div>
+      <div class="bloc2">{{x.patient_name}}</div>
+    </div>
+
+	 <div class="block_container">
+      <div class="bloc1">Relationship: </div>
+      <div class="bloc2">{{x.relationship}}</div>
+    </div>
+
+	 <div class="block_container">
+      <div class="bloc1">Period start: </div>
+      <div class="bloc2">{{x.claim_period_start}}</div>
+    </div>
+
+    	 <div class="block_container">
+      <div class="bloc1">Period end: </div>
+      <div class="bloc2">{{x.claim_period_end}}</div>
+    </div>
+</div>
+
+
+<br>
+	<h4><span>Claim Details</span></h4>
+
+
+<div *ngIf="x">
+
+
+	 <div class="block_container">
+      <div class="bloc1">Type: </div>
+      <div class="bloc2">{{x.type}}</div>
+    </div>
+
+	 <div class="block_container">
+      <div class="bloc1">Ammount: </div>
+      <div class="bloc2">{{x.claimed_value}}</div>
+    </div>
+
+	 <div class="block_container">
+      <div class="bloc1">Claim status: </div>
+      <div class="bloc2">{{x.status}}</div>
+    </div>
+
+	 <div class="block_container">
+      <div class="bloc1">Submitted date: </div>
+      <div class="bloc2">{{x.submitted_at}}</div>
+    </div>
+
+   <div class="block_container">
+      <div class="bloc1">Hospital name: </div>
+      <div class="bloc2">{{x.hospital_name || 'N/A'}}</div>
+    </div>
+
+       <div class="block_container">
+      <div class="bloc1">Hospital city: </div>
+      <div class="bloc2">{{x.hospital_city || 'N/A'}}</div>
+    </div>
+</div>
+
+<br>
+  <h4><span>Claim Description</span></h4>
+   <div class="block_container">
+      <div class="bloc1">Claim Description: </div>
+      <div class="bloc2" >{{x.claim_description || 'N/A'}} </div>
+    </div>
+
+
+</ion-content>

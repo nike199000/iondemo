@@ -1,0 +1,219 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle color="light" >
+      <ion-icon name="menu" style="color:white"></ion-icon>
+    </button>
+    <ion-title >IGI GENERAL INSURANCE</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<!-- Whole card section start here
+-->
+
+<div  [ngSwitch]="galleryType">
+<!--     back side of card start
+-->
+
+<div class="card" *ngSwitchCase="'regular'">
+
+<div>
+  <br>
+  <div class="block_container">
+    <div class="bloc1">24/7 Medical Hotline Numbers :</div>
+    <div class="bloc2">042-3450-3333</div>
+  </div>
+
+<br>
+
+  <p  class="let">if found please return to:</p>
+
+  <div class="tit2">IGI General Insurance Limited - Window Takaful Operations</div>
+  <div class="let">7th Floor, The Forum, Suite #701 - 713, G-20, Block -9, Khayaban-e-Jami, Clifton,</div>
+  <div class="let">Karachi-75600, Pakistan,</div>
+  <div class="let">Phones (92-21)111-234-234, Fax No.(92-21) 35301772, 35301729</div>
+  <div class="let">E-mail: contact.generaltakaful@igi.com.pk  Website: http://takaful.igiinsurance.com.pk</div>
+  <div class="let">This card provides coverage whist takaful remains in forece. Covered participants and dependents are entitled to benefits subject to the terms of the policy.</div>
+
+</div>
+
+<br> 
+
+</div>
+
+<!--   Back side of card end 
+-->
+
+
+
+<!--   Front side of card start
+-->  
+<div class="card" *ngSwitchCase="'pinterest'" >
+
+  <div *ngFor="let s of dd" class="box">
+
+<!--       <div class="bloc22"><img class="logocard" src="assets/imgs/general.png" style="height: 40px; width: 40px;"></div>
+-->
+
+<div class="block_container1">
+  <div  class="tit" *ngFor="let c of cdata">{{c.name}}</div>
+  <div class="myImg" ><img  src="assets/imgs/ll.png" style="height: 65px"></div>
+</div>
+
+
+<div class="block_container">
+  <div class="bloc1">Name: </div>
+  <div class="bloc2">{{s.name}}</div>
+</div>
+
+<div class="block_container">
+  <div class="bloc1">Age: </div>
+  <div class="bloc2">{{s.age}}</div>
+</div>
+
+
+<div class="block_container">
+  <div class="bloc1">CNIC NO: </div>
+  <div class="bloc2">{{s.cnic}}</div>
+</div>
+
+<div class="block_container">
+  <div class="bloc1">I.D NO: </div>
+  <div class="bloc2">{{s.health_card_no}}</div>
+</div>  
+
+<ion-grid no-padding class="member">
+  <ion-row>
+    <ion-col col-6 *ngFor="let f of f1" > <!-- JUST ADD A col-4 attribute -->
+      <div class="mem-title">
+        <div class="block_container5">
+          <div class="bloc5">{{f.name}} </div>
+          <div class="bloc51">{{f.age}}</div>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<hr style="border: 0.7px solid" width="95%">
+<div class="row" >
+        <div class="block_container6">
+          <div class="bloc6">Room Sub-Limit:</div>
+          <div class="bloc61">{{s.room_limit}}</div>
+        </div>
+
+        <div class="block_container6">
+          <div class="bloc6">Effective Date:</div>
+          <div class="bloc61">{{s.effective_date}}</div>
+        </div>
+
+
+
+        <div class="block_container6">
+          <div class="bloc6">Expiry Date:</div>
+          <div class="bloc61">{{s.expiry_date}}</div>
+        </div>
+
+
+      </div>
+</div>
+<br>
+
+</div>
+
+
+
+</div>
+<!--  Whole card end 
+-->
+
+<!--   Segment Or card shift buttons start
+-->
+<br>
+<br><ion-segment  [(ngModel)]="galleryType"  color="primary">
+  <ion-segment-button value="pinterest">
+    Front
+  </ion-segment-button >
+  <ion-segment-button value="regular">
+    Back
+  </ion-segment-button>
+
+</ion-segment>
+
+<!--   Segment or card shift buttons end 
+-->
+
+<!--  Bottom area of 
+-->
+
+<br>
+<ion-item (click)="benefit()">
+  <div class="block_containerw1">
+  <div class="blocw1"><img src="assets/imgs/det.png" height="40" width="40"></div>
+  <div class="blocw2"><font style="margin-left: 8px;">My Benefits and Policy Details </font></div>
+</div>  
+<ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+</ion-item>
+
+<ion-item (click)="status()">
+  <div class="block_containerw1">
+  <div class="blocw1"><img src="assets/imgs/stat.png" height="40" width="40"></div>
+  <div class="blocw2"><font style="margin-left: 8px;">My Claim Status </font></div>
+</div> 
+
+  <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+</ion-item>
+
+<ion-item (click)="gotoList()">
+  <div class="block_containerw1">
+  <div class="blocw1"><img src="assets/imgs/hosp.png" height="40" width="40"></div>
+  <div class="blocw2"><font style="margin-left: 8px;">List of Panel Hospitals</font></div>
+</div> 
+  <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+
+</ion-item>
+
+<ion-item >
+
+
+    <div class="block_containerw1">
+  <div class="blocw1"><img src="assets/imgs/cl.png" height="40" width="40"></div>
+  <div class="blocw2">
+    <font style="margin-left: 8px;"> 
+     <a href="tel:042-3450-3333"> <font style="margin-left: 8px;" href="tel:042-3450-3333" > Call IGI Helpline</font></a></font></div>
+</div> 
+  <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+
+
+</ion-item>
+
+<!-- Bottom area end 
+-->
+<!-- <br>
+<div class="image-wrapper" style="text-align: center;">
+  <img src="assets/imgs/det.png" />
+  <span class="pp">My Benefits and Details</span>
+</div>
+
+<div class="image-wrapper" style="text-align: center;">
+  <img src="assets/imgs/stat.png" />
+  <span class="pp">My Claim Status</span>
+</div>
+
+<div class="image-wrapper" style="text-align: center;">
+  <img src="assets/imgs/hosp.png" />
+  <span class="pp">List of Hospitals</span>
+</div>
+
+<div class="image-wrapper" style="text-align: center;">
+  <img src="assets/imgs/cl.png" />
+  <span class="pp">Call IGI Helpline</span>
+</div> -->
+
+
+
+
+</ion-content>
+<ion-footer >
+<div style="text-align: center; background-color: #0073b7; height: 20px; color: white">IGI General Insurance Limited.
+</div>
+</ion-footer>

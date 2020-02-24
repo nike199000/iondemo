@@ -1,0 +1,128 @@
+<ion-menu  id="menu1"  [content]="content" [swipeEnabled]="false">
+
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title text-center >MENU</ion-title>
+    </ion-toolbar>
+
+     <div class="container-box">
+    <div style="width: 100%; height: 70px; background-color: #0073b7"></div>
+    <div style="width: 100%; height: 70px;"></div>
+    <div class="image">
+        <img src="assets/imgs/asd.png" height="100" width="100" style="margin-bottom: -15px;" />
+        <h5 style="text-align: center; margin-bottom: -10px;" *ngIf="username">{{username}}</h5>
+                <h6 style="text-align: center;" *ngIf="mail">{{mail}}</h6>
+
+
+    </div>
+</div>
+
+  </ion-header>
+
+  <ion-content class="nav">
+  	<ion-list >
+  		<ion-item menuClose>
+         Home
+   <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+  		</ion-item>
+
+  		<ion-item  menuClose  (click)="member()">
+         Family members
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+
+  		</ion-item>
+
+  		<ion-item (click)="status()" menuClose>
+         Claim Status
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+
+  		</ion-item>
+
+  		<ion-item (click)="hospital()" menuClose>
+         List of Hospitals
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+
+  		</ion-item>
+
+      <ion-item (click)="feed()" menuClose>
+         Feed Back / Inquiry
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+
+      </ion-item>
+ 
+
+
+
+  		 <ion-item menuClose (click)="Logout()">
+          Logout
+             <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+
+  		</ion-item>
+  	</ion-list>
+
+
+  </ion-content>
+
+</ion-menu>
+
+<ion-menu  id="menu2"  [content]="content" [swipeEnabled]="false">
+
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title text-center >MENU2</ion-title>
+    </ion-toolbar>
+
+     <div class="container-box">
+    <div style="width: 100%; height: 70px; background-color: #0073b7"></div>
+    <div style="width: 100%; height: 70px;"></div>
+    <div class="image">
+        <img src="assets/imgs/asd.png" height="100" width="100" style="margin-bottom: -15px;" />
+        <h5 style="text-align: center; margin-bottom: -10px;" *ngIf="username">{{username}}</h5>
+                <h6 style="text-align: center;" *ngIf="mail">{{mail}}</h6>
+
+
+    </div>
+</div>
+
+  </ion-header>
+
+  <ion-content class="nav">
+    <ion-list >
+      <ion-item menuClose>
+         Home
+   <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+      </ion-item>
+
+      <ion-item  menuClose  (click)="member()">
+         Family members
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+
+      </ion-item>
+
+      <ion-item (click)="status()" menuClose>
+         Claim Status
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+
+      </ion-item>
+
+      <ion-item (click)="hospital()" menuClose>
+         List of Hospitals
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+
+      </ion-item>
+
+
+       <ion-item menuClose (click)="Logout()">
+          Logout
+             <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right color="primary"></ion-icon>
+
+      </ion-item>
+    </ion-list>
+
+
+  </ion-content>
+
+</ion-menu>
+
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

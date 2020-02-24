@@ -1,0 +1,241 @@
+page-front {
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pp{
+  color: #488aff;
+  margin-top: 5px;
+}
+.image-wrapper {
+  box-sizing:border-box;
+  float: left;
+  margin-bottom:0px;
+  width: 50%;
+  border-color: #488aff;
+  border-style: ridge ;
+  height: 150px;
+}
+
+.image-wrapper:nth-child(even)
+{
+  padding-left:5px;
+}
+
+.image-wrapper:nth-child(odd)
+{
+  padding-right:5px;
+}
+
+.image-wrapper > img {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.image-wrapper > span {
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+
+.mem-title{
+  font-size: 12px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: #000000;}
+
+
+.card{
+	background-color: #D7DBDD;    // <=====Whole card section //
+	  border-radius: 12px;
+}
+
+.tit {
+	margin-left: 10px;
+	margin-top: 5px;
+
+	font-size: 11px;
+	font-weight: 500;
+
+}
+
+.let {
+	font-size:9.4px;
+	margin-left: 10px;
+
+}
+.tit2 {
+	margin-left: 10px;
+  text-align: left;
+
+	font-size: 12px;
+	margin-top: -10px;
+	font-weight: 500;
+
+}
+
+.block_container {
+    text-align: left;
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+
+
+
+.block_container > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.myImg {
+  float: right;
+  margin-right: 20px;
+}
+
+
+.bloc2{
+	font-size:10px;
+	font-weight: 600;
+}
+
+.bloc1{
+	font-size: 10px;
+}
+
+
+
+.block_containerw1 > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.blocw2{
+  font-size:16px;
+  font-weight: 450;
+}
+
+.blockw1{
+}
+
+
+.item{
+  height: 60px;
+}
+
+
+
+
+
+
+
+//card company and image sstart//
+.block_container1 > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.block11{
+  
+}
+.bloc22{
+  margin-left: 0px;
+}
+//card company and image end//
+
+
+//member css start //
+.block_container5 > div {
+    display: inline-block;
+    vertical-align: middle;
+        margin-left: 10px;
+        margin-top: 5px;
+
+}
+
+.bloc5{
+  font-size:9px;
+}
+
+.bloc51{
+  font-size: 9px;
+    font-weight: 500;
+
+}
+
+.block_container6 > div {
+    display: inline-block;
+    vertical-align: middle;
+        margin-left: 10px;
+        margin-top: 5px;
+
+}
+.bloc6{
+  font-size:9px;
+  font-weight: 500;
+}
+
+.bloc61{
+  font-size: 9px;
+
+}
+
+
+//member css end //
+
+.column {
+  float: left;
+  width: 50%;
+  height: 20px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  text-align: left;
+}
+
+.sec{
+	margin-left: 10px;
+	margin-top: -8px;
+}
+.line {
+	 text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+}

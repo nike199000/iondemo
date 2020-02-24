@@ -1,0 +1,57 @@
+page-main {
+
+    ion-navbar.toolbar {
+      min-height: 20px;
+    }
+
+.bttn{
+	margin-top: 100px;
+}
+
+.getstart {
+
+//background-image: url('../assets/imgs/00.jpg');
+background-repeat: no-repeat;
+background-size:cover;
+
+
+}
+
+.logo{
+	margin-top: 70px;
+}
+
+.left {
+  float: left;
+  width: 50%;
+  height: 250px;
+  margin-bottom: -60px;
+}
+
+.container {
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+  position: relative;
+  text-align: center;
+}
+.centered {
+  position: absolute;
+  top: 40%;
+    color: red;
+  font-size: 35px;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.trans {
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+}
+
+
+}
+
+
+
+

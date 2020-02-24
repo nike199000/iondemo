@@ -1,0 +1,96 @@
+<!--
+  Generated template for the ClaimstatusPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>CLAIM STATUS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="back">
+<br>
+	<div class="cc">Your Claim Status</div>
+	<div class="pp">Stay updated on your claim status right from your phone</div>
+	<br>
+
+	<ion-list *ngFor = "let x of claims" (click)="goDetails(x)">
+
+<!-- 		<ion-item>
+			<div>Claim No : {{x.claim_no}}</div>
+			<div>Patient Name : {{x.patient_name}}</div>
+			<div>Status : {{x.status}}</div>
+			<div> Claim value {{x.claimed_value}}</div>
+			<hr>
+
+		</ion-item> -->
+
+		<ion-item class="itemheight">
+			 <ion-grid  class="member">
+                <ion-row>
+                     <ion-col col-6 > <!-- JUST ADD A col-4 attribute -->
+                        <div class="mem-title">
+                            <div class="block_container5">
+                        	   <div class="bloc5">Approved Value: </div>
+                               <div class="bloc511">{{x.approved_value | number : fractionSize}}</div>
+                            </div>
+                        </div>
+                       </ion-col>
+
+                       <ion-col col-6 > <!-- JUST ADD A col-4 attribute -->
+                           <div class="mem-title">
+                              <div class="block_container5">
+                                 <div class="bloc5">Patient Name: </div>
+                                 <div class="bloc51">{{x.patient_name}}</div>
+                              </div>
+                           </div>
+                       </ion-col>
+
+                        <ion-col col-6 *ngIf="x.claim_no"> <!-- JUST ADD A col-4 attribute -->
+                            <div class="mem-title">
+                                <div class="block_container5">
+                        	      <div class="bloc5">Claim #: </div>
+                                  <div class="bloc51">{{x.claim_no}}</div>
+                                </div>
+                            </div>
+                        </ion-col>
+
+                       
+                        <ion-col col-6 > <!-- JUST ADD A col-4 attribute -->
+                           <div class="mem-title">
+                              <div class="block_container5">
+                                <div class="bloc5">Claim value:</div>
+                                <div class="bloc51">{{x.claimed_value | number : fractionSize}}</div>
+                              </div>
+                            </div>
+                        </ion-col>
+
+
+                        <ion-col col-6 > <!-- JUST ADD A col-4 attribute -->
+                            <div class="mem-title">
+                               <div class="block_container5">
+                                  <div class="bloc5">Status:</div>
+                                  <div class="bloc51" *ngIf="x.status == 'settled'" style="color: blue">Settled</div>
+                                  <div class="bloc51" *ngIf="x.status == 'unsettled'" style="color: red">Unsettled</div>
+                                  <div class="bloc51" *ngIf="x.status == 'rejected'" style="color: red">rejected</div>
+                                  <div class="bloc51" *ngIf="x.status == 'paid'" style="color: red">Paid</div>
+                                  <div class="bloc51" *ngIf="x.status == 'submitted'" style="color: red">Submitted</div>
+
+                                </div>
+                            </div>
+                        </ion-col>
+
+               </ion-row>
+           </ion-grid>
+</ion-item>
+</ion-list>
+
+
+
+</ion-content>
+<ion-footer >
+<div style="text-align: center; background-color: #0073b7; height: 20px; color: white">IGI General Insurance Limited.
+</div>
+</ion-footer>
